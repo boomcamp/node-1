@@ -6,7 +6,7 @@ const PORT = 3000;
 const products = require('../products.json');
 
 app.get('/api/products', (req, res) => {
-	res.send(products);
+	res.status(200).send(products);
 });
 
 app.listen(PORT, (err) => {
