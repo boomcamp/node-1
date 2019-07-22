@@ -1,13 +1,10 @@
 const express = require('express');
 
 const app = express();
-
+const getProducts = require('./getProducts');
 const PORT = 3000;
-const products = require('../products.json');
 
-app.get('/api/products', (req, res) => {
-	res.status(200).send(products);
-});
+app.get('/api/products', getProducts);
 
 app.listen(PORT, (err) => {
 	if (err) return console.error(err);
