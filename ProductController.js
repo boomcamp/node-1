@@ -5,7 +5,8 @@ exports.getProducts = (req,res) => {
 
 	if(price){
 		let items = products.filter(prod=>parseInt(prod.price) >= parseInt(price));
-		res.status(200).send(items);
+		if(items) res.status(200).send(items);
+		else res.send("There are no products.");
 	}
 	else res.status(200).send({products});
 }
