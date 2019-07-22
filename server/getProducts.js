@@ -11,6 +11,14 @@ const getProducts = (req, res) => {
         })
         return res.status(200).send(items);
     }
+    if(req.query.name){
+        products.map(prod => {
+            if(prod.product_name.toLowerCase() === req.query.name.toLowerCase()){
+                return res.status(200).send(prod);
+            }
+        })
+        res.status(500).send('Item not in list'); 
+    }
     res.status(200).send(products);
 };
 
