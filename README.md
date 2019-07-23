@@ -257,7 +257,7 @@ dataset.
 ```js
 const express = require('express');
 const getProducts = require('./getProducts');
-const getProduct = require('./getProduct);
+const getProduct = require('./getProduct');
 
 const app = express();
 
