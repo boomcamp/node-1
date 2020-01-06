@@ -6,7 +6,9 @@ const getProducts = (req, res) => {
         return res.status(200).send(item)
     }
     res.status(200).send(products);
+}
 
+const getProductsById = (req, res) => {
     const prod = products.find(data => data.id === Number(req.params.id));
     if (!prod) {
         return res.status(500).send('Item not on the list');
@@ -14,4 +16,4 @@ const getProducts = (req, res) => {
     res.status(200).send(prod);
 }
 
-module.exports = getProducts
+module.exports = { getProducts, getProductsById }
