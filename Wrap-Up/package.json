@@ -1,0 +1,14 @@
+{
+  "name": "wrap-up",
+  "version": "1.0.0",
+  "description": "In this project, building an API from scratch with mockaroo data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rap",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
